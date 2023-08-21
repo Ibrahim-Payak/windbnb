@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import List from "./components/List";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
+  const [filteredResults, setFilteredResults] = useState(null);
+  console.log(filteredResults);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <Navbar setFilteredResults={setFilteredResults} />
+        <div class="mainHeader">
+          <h1 class="mainTitle">
+            {filteredResults != null
+              ? `Stays in ${filteredResults[0].country}`
+              : ""}
+          </h1>
+          <span class="mainCount">
+            {filteredResults != null ? `${filteredResults?.length} stays` : ""}{" "}
+          </span>
+        </div>
+        <List filteredResults={filteredResults} />
+      </div>
+    </>
   );
-}
+};
 
 export default App;

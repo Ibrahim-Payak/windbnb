@@ -1,13 +1,252 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.mainTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.mainCount {
+  cursor: default;
+  font-size: 0.875rem;
+  font-weight: 450;
+  margin-right: 50px;
+}
+
+/* card Style */
+
+.propertyImage {
+  width: 395px;
+  height: 269px;
+  border-radius: 24px;
+  margin-bottom: 15px;
+}
+
+.summary {
+  display: flex;
+  width: 700px;
+}
+
+.superHost {
+  width: 75px;
+  height: 17px;
+  border-radius: 12px;
+  border: 1px solid #4f4f4f;
+  color: #4f4f4f;
+  padding: 6px;
+  font-size: 10px;
+  margin-right: 8px;
+}
+
+.left,
+.right {
+  flex: 1;
+}
+
+.left {
+  color: #828282;
+}
+
+.starIcon {
+  color: #eb5757;
+  padding: 0px 4px;
+}
+
+.propertyCard {
+  width: calc(33.33%);
+}
+
+.title {
+  color: rgb(83, 83, 215);
+  font-weight: bold;
+}
+
+/* List Style */
+.propertyList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Navbar style */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px #0000001a;
+  height: 55px;
+  margin: 40px 40px 40px 0px;
+}
+
+.searchButton {
+  border: none;
+  background-color: initial;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.expanded {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 85%;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -95px;
+  justify-content: center !important;
+}
+
+.firstBox,
+.secondBox {
+  border: none;
+  color: #bdbdbd;
+  text-align: center;
+  width: 120px;
+}
+
+.firstBox:focus,
+.secondBox:focus {
+  outline: none;
+}
+
+.firstBox {
+  border-radius: 16px 0 0 16px;
+  color: black;
+}
+
+.searchBox {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.searchIcon {
+  color: #eb5757;
+  border-radius: 0 16px 16px 0;
+}
+
+.searchExpanded {
+  color: black;
+  width: 400px !important;
+  text-align: start !important;
+}
+
+.iconExpanded {
+  color: #fff !important;
+}
+
+.buttonContainer {
+  margin: 0px 130px;
+}
+
+.searchBox {
+  align-items: center;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0.9em 0.8em 0.9em 0.8em;
+  height: 50px;
+}
+
+.searchBoxExpand {
+  background-color: #eb5757;
+  color: #fff;
+}
+
+.searchTitle {
+  font-size: 0.56rem;
+  font-weight: 780;
+  margin-bottom: 0.25em;
+  text-transform: uppercase;
+  color: black;
+  text-align: start;
+  padding-left: 3px;
+}
+
+.location,
+.guest {
+  border-right: 1px solid #f2f2f2;
+  padding: 12px 0px 0px 5px;
+  height: 100%;
+}
+
+/* Guest Selection Style */
+.guestContainer {
+  inset: 146px 0 0 26px;
+  width: max-content;
+  height: max-content;
+  margin-top: 10px;
+}
+
+.guestAdult {
+  margin-bottom: 3.25em;
+}
+
+.guestSubtitle {
+  margin-bottom: 0.75em;
+  color: #bdbdbd;
+}
+
+.guestAdult,
+.guestChildren,
+.guestTitle,
+.guestSubtitle {
+  display: inline-block;
+  cursor: default;
+}
+
+.guestTitle,
+.guestSubtitle {
+  font-size: 0.875rem;
+}
+
+.counterBtn {
+  background-color: #fff;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  width: 23px;
+  height: 23px;
+  font-size: 16px;
+  color: #828282;
+  cursor: pointer;
+}
+
+.guestCounter {
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 5px 0px 0px 4px;
+}
+
+.counterBtn,
+.guestCounter {
+  margin-right: 1em;
 }
